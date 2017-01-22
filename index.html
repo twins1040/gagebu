@@ -13,7 +13,7 @@
 
   </head>
   <body>
-    <h1 class="text-center">Hello World!</h1>
+    <h1 id="button1" class="text-center">1</h1>
 
 
 
@@ -26,6 +26,14 @@
     <!-- Toss JS Framework CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://toss.im/tossframe/assets/javascripts/tossframe.js"></script>
-
+    <script>
+      $(document).ready(function(){
+        $("#button1").click(function(){
+          str = $("#button1").html();
+          num = parseInt(str) + 1;
+          $(this).html(num);
+        });
+      });
+    </script>
   </body>
 </html>
